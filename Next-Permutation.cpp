@@ -3,7 +3,7 @@ public:
 vector<int> nextPermutation(vector<int>& A) {
         int breakpoint=-1;
         int n=A.size();
-        for(int i=n-2;i>=0;i--){
+        for(int i=n-2;i>=0;i--){ 
             if(A[i]<A[i+1]){
                 breakpoint=i;
                 break;
@@ -26,3 +26,12 @@ vector<int> nextPermutation(vector<int>& A) {
         
     }
 };
+
+// ARRAY -MEDIUM LEVEL
+// NEXT PERMUTATION 
+// Its like find the words in dictionary.we need to find just immediate permutation
+//  intitally find breakpoint- current element< next element
+// if no breakpoint just reverse the array
+// swap the breakpoint number with the next greater number 
+// reverse the array from breakpoint+1 to end (right part)
+// tc-O(3N) SC-O(1)
